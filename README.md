@@ -13,10 +13,10 @@ A **quick link** is a short, memorable path (e.g. `/testskolan`) that redirects 
 
 ## Requirements
 
-| Requirement | Version |
-|---|---|
-| WordPress | 6.4 or later |
-| PHP | 8.3 or later |
+| Requirement | Version      |
+| ----------- | ------------ |
+| WordPress   | 6.4 or later |
+| PHP         | 8.3 or later |
 
 ## Installation
 

@@ -6,6 +6,13 @@ namespace EasyQuicklinks\Admin;
 
 class QuickEditSave
 {
+    private SlugValidator $validator;
+
+    public function __construct(?SlugValidator $validator = null)
+    {
+        $this->validator = $validator ?? new SlugValidator();
+    }
+
     public function register(): void
     {
         add_action('save_post_page', [$this, 'save'], 10, 2);
@@ -46,42 +53,10 @@ class QuickEditSave
             return;
         }
 
-        if (! preg_match('/^[a-z][a-z-]*$/', $slug)) {
-            return;
-        }
-
-        if ($this->topLevelPageExists($slug, $postId)) {
-            return;
-        }
-
-        if ($this->quickLinkExists($slug, $postId)) {
+        if ($this->validator->validate($slug, $postId) !== null) {
             return;
         }
 
         update_post_meta($postId, QuickEditColumn::META_KEY, $slug);
-    }
-
-    private function topLevelPageExists(string $slug, int $excludePostId): bool
-    {
-        $page = get_page_by_path($slug, OBJECT, 'page');
-
-        return $page instanceof \WP_Post
-            && $page->post_parent === 0
-            && $page->ID !== $excludePostId;
-    }
-
-    private function quickLinkExists(string $slug, int $excludePostId): bool
-    {
-        $query = new \WP_Query([
-            'post_type'      => 'page',
-            'meta_key'       => QuickEditColumn::META_KEY,
-            'meta_value'     => $slug,
-            'post__not_in'   => [$excludePostId],
-            'posts_per_page' => 1,
-            'fields'         => 'ids',
-            'no_found_rows'  => true,
-        ]);
-
-        return $query->have_posts();
     }
 }
