@@ -1,0 +1,18 @@
+{
+    "name": "pitea/easy-quicklinks",
+    "description": "WordPress plugin that adds support for top level quick link redirect in the post quick edit.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "EasyQuicklinks\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

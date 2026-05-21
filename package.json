@@ -1,0 +1,7 @@
+{
+    "name": "easy-quicklinks",
+    "version": "1.0.0",
+    "scripts": {
+        "make-pot": "wp i18n make-pot . languages/easy-quicklinks.pot --domain=easy-quicklinks --exclude=vendor"
+    }
+}
