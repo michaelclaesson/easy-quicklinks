@@ -45,7 +45,7 @@ The plugin registers a filter on `wp_unique_post_slug` so that WordPress will ne
 
 ## Integrations
 
-- **Nested Pages** — the quick link value is preserved when pages are reordered or updated via the Nested Pages plugin.
+- **Nested Pages** — the quick link field is available in Nested Pages quick edit, uses the same validation as the built-in WordPress quick edit, and prevents duplicate quick links or conflicts with top-level page slugs.
 
 ## Translations
 
