@@ -1,5 +1,5 @@
 {
-    "name": "pitea/easy-quicklinks",
+    "name": "michaelclaesson/easy-quicklinks",
     "description": "WordPress plugin that adds support for top level quick link redirect in the post quick edit.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
