@@ -4,14 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy Quicklinks 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-quicklinks\n"
-"POT-Creation-Date: 2026-05-21T18:40:40+00:00\n"
-"PO-Revision-Date: 2026-05-21 20:41+0200\n"
+"POT-Creation-Date: 2026-05-22T06:52:54+00:00\n"
+"PO-Revision-Date: 2026-05-22 08:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.9\n"
 "X-Domain: easy-quicklinks\n"
 
@@ -27,32 +28,24 @@ msgstr ""
 "Lägger till stöd för snabblänksomdirigering på toppnivå i snabbredigeringen "
 "av inlägg."
 
-#: src/Admin/Ajax.php:20
+#: src/Admin/Ajax.php:27
 msgid "Unauthorized."
 msgstr "Ej behörig."
 
-#: src/Admin/Ajax.php:34 src/Admin/QuickEditColumn.php:108
-msgid "Only lowercase letters (a-z) and dashes (-) are allowed."
-msgstr "Endast gemener (a-z) och bindestreck (-) är tillåtna."
-
-#: src/Admin/Ajax.php:43
-msgid "A top-level page already uses this slug."
-msgstr "En sida på toppnivå använder redan detta alias."
-
-#: src/Admin/Ajax.php:60
-msgid "This quick link is already in use by another page."
-msgstr "Den här snabblänken används redan av en annan sida."
-
-#: src/Admin/Ajax.php:66 src/Admin/QuickEditColumn.php:110
+#: src/Admin/Ajax.php:49 src/Admin/QuickEditColumn.php:110
 msgid "Quick link is available."
 msgstr "Snabblänken är tillgänglig."
 
-#: src/Admin/NestedPagesIntegration.php:29 src/Admin/QuickEditColumn.php:22
-#: src/Admin/QuickEditColumn.php:60
+#: src/Admin/NestedPagesIntegration.php:41
+#: src/Admin/NestedPagesIntegration.php:152
+#: src/Admin/NestedPagesIntegration.php:171 src/Admin/QuickEditColumn.php:22
+#: src/Admin/QuickEditColumn.php:60 src/Admin/QuicklinksListTable.php:16
+#: src/Admin/QuicklinksListTable.php:31
 msgid "Quick Link"
 msgstr "Snabblänk"
 
-#: src/Admin/NestedPagesIntegration.php:30
+#: src/Admin/NestedPagesIntegration.php:153
+#: src/Admin/NestedPagesIntegration.php:172
 msgctxt "Indicates a post has a quick link slug set in the quick edit"
 msgid "quick link"
 msgstr "snabblänk"
@@ -68,6 +61,10 @@ msgstr ""
 "Endast gemener och bindestreck. Skapar en omdirigering på toppnivå till "
 "denna sida."
 
+#: src/Admin/QuickEditColumn.php:108 src/Admin/SlugValidator.php:16
+msgid "Only lowercase letters (a-z) and dashes (-) are allowed."
+msgstr "Endast gemener (a-z) och bindestreck (-) är tillåtna."
+
 #: src/Admin/QuickEditColumn.php:109
 msgid "This quick link is already in use."
 msgstr "Den här snabblänken används redan."
@@ -75,3 +72,76 @@ msgstr "Den här snabblänken används redan."
 #: src/Admin/QuickEditColumn.php:111
 msgid "Checking availability"
 msgstr "Kontrollerar tillgänglighet"
+
+#: src/Admin/QuicklinksListTable.php:17 src/Admin/QuicklinksPage.php:31
+#: src/Admin/QuicklinksPage.php:32 src/Admin/QuicklinksPage.php:67
+msgid "Quick Links"
+msgstr "Snabblänkar"
+
+#: src/Admin/QuicklinksListTable.php:30
+msgid "Page"
+msgstr "Sida"
+
+#: src/Admin/QuicklinksListTable.php:45
+msgid "Delete"
+msgstr "Ta bort"
+
+#: src/Admin/QuicklinksListTable.php:56
+msgid "No quick links have been set yet."
+msgstr "Inga snabblänkar har lagts till ännu."
+
+#: src/Admin/QuicklinksListTable.php:139
+msgid "(no title)"
+msgstr "(ingen titel)"
+
+#. translators: %s: page title
+#: src/Admin/QuicklinksListTable.php:168
+msgid "Delete quick link for ā€œ%sā€"
+msgstr "Ta bort snabblänk för ”%s”"
+
+#: src/Admin/QuicklinksListTable.php:170
+msgid "Delete quick link"
+msgstr "Ta bort snabblänk"
+
+#: src/Admin/QuicklinksPage.php:45
+msgid "Quick links per page"
+msgstr "Snabblänkar per sida"
+
+#: src/Admin/QuicklinksPage.php:58
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Du har inte tillräcklig behörighet för att komma åt den här sidan."
+
+#: src/Admin/QuicklinksPage.php:76
+msgid "Search pages"
+msgstr "Sök sidor"
+
+#. translators: %d: number of deleted quick links
+#: src/Admin/QuicklinksPage.php:178
+msgid "%d quick link deleted."
+msgid_plural "%d quick links deleted."
+msgstr[0] "%d snabblänk borttagen."
+msgstr[1] "%d snabblänkar borttagna."
+
+#: src/Admin/QuicklinksPage.php:213
+msgid ""
+"Are you sure you want to remove this quick link? The page itself is not "
+"affected."
+msgstr ""
+"Är du säker på att du vill ta bort den här snabblänken? Själva sidan "
+"påverkas inte."
+
+#: src/Admin/QuicklinksPage.php:214
+msgid "Loadingā€¦"
+msgstr "Laddar…"
+
+#: src/Admin/QuicklinksPage.php:215
+msgid "An error occurred. Please refresh the page and try again."
+msgstr "Ett fel uppstod. Uppdatera sidan och försök igen."
+
+#: src/Admin/SlugValidator.php:20
+msgid "A top-level page already uses this slug."
+msgstr "En sida på toppnivå använder redan detta alias."
+
+#: src/Admin/SlugValidator.php:24
+msgid "This quick link is already in use by another page."
+msgstr "Den här snabblänken används redan av en annan sida."

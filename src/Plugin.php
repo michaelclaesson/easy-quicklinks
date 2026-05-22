@@ -53,6 +53,7 @@ class Plugin
             (new Admin\QuickEditSave())->register();
             (new Admin\Ajax())->register();
             (new Admin\NestedPagesIntegration())->register();
+            (new Admin\QuicklinksPage())->register();
         } else {
             (new Frontend\Redirect())->register();
         }
